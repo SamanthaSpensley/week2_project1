@@ -9,7 +9,14 @@
 // 1. Create an object called "me" that describes you with your name, city, and job title.
 
 //console.log("Question 1");
-//console.log(yourAnswer);
+var me = {
+    name: "Samantha Spensley",
+    city: "Denver",
+    jobTitle: "Project Coordinator",  
+};
+
+Object {name: "Samantha Spensley", city: "Denver", jobTitle: "Project Coordinator"}
+
 
 // 2. To your "me" object, add a key of "family" with the value being an array of three of your family members.
 // Example of desired output: { name: 'Bob Smith',
@@ -17,7 +24,17 @@
 //                              jobTitle: 'professional wrestler',
 //                               family: ['Joan', 'Kyle', 'Hank'] }
 
+//console.log("Question 2");
+me.family = ["John", "Laura", "Patrick"];
+
+Object {name: "Samantha Spensley", city: "Denver", jobTitle: "Project Coordinator", family: Array[3]}
+
+
+
 // 3. Using the "me" object, use two different methods of accessing your city.
+//console.log("Question 3");
+var meCity = me.city;
+var meCity = me["city"];
 
 // Use the following Object for questions 4-9:
 var invitees = { adults: [{
