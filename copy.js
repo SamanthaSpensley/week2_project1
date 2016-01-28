@@ -73,73 +73,29 @@ var invitees = { adults: [{
 
 // 4. Access Penny's dinner choice (this will be the second item in his dinneChoice array)
 
-invitees.adults[0].dinnerChoice[1];
-
 // 5. Access Pablo's table number.
-
-invitees.children[1].table;
 
 // 6. Access Lauren's seating specialConsideration.
 
-invitees.adults[2].specialConsiderations.seating;
-
 // 7. Access Billy's dessert choice (this will be the third item in his dinneChoice array)
 
-invitees.adults[1].dinnerChoice[2];
-
 // 8. Access Ada's allergies.
-
-invitees.children[2].allergies;
 
 // 9. Create a string that reads Lauren's dinner choice in a sentence.
 // Desired result: "Lauren's appetizer is _______. She will be eating ______ for dinner
 // and has selected ________ as her dessert."
 
-console.log("Lauren's appetizer is " + invitees.adults[2].dinnerChoice[0] + ". She will be eating " + invitees.adults[2].dinnerChoice[1] + " for dinner and has selected " + invitees.adults[2].dinnerChoice[2] + " as her dessert." );
-
-//CREATE VARIABLE for "invitees.adults[2].dinnerChoice" and call variable in string
-
 // 10. Create an empty object called "jsWorkshop" using Constructor Notation.
-var jsWorkshop = { }; 
-console.log(jsWorkshop);
-
 
 // 11. To your "jsWorkshop" object, assign a key of "classmates" with the value being an array of five your classmates.
-jsWorkshop.classmates = ['Tommy', 'Rick', 'Joe', 'Emran', 'Tim'];
 
 // 12. Acesss the third classmate in your "jsWorkshop" object.
-jsWorkshop.classmates[2];
 
 // 13. Get the length of the fourth classmate's name.
-jsWorkshop.classmates[3].length;
-
 
 // 14. Clear the classmates value.
 
-jsWorkshop.classmates = '';
-
 // 15. Create an emtpy array called "books".
-
-var books = [];
-
-var book1 = {samIam:
-             {title: "Green Eggs and Ham",
-               author: "Dr. Seuss",
-               pages: 24
-             }};
-var book2 = {boysBoat:
-        {title: "Boys in the Boat",
-        author: "Daniel Brown",
-        pages: 669
-               }};
-var book3 = {silkworm:
-        {title: "Silkworm",
-        author: "Robert Galbraith",
-        pages: 547
-        }};
-
-books.push(book1, book2, book3);
-
 // Create three objects that contain book titles, their author, and number of pages.
 // Insert the three objects into the "books" array.
 // (Feel free to make up the titles. And the authors. Have fun. No pressure.)
@@ -184,8 +140,6 @@ books.push(book1, book2, book3);
 
 // 21. Within each animal object, assign a object pair consisting of a key called "meals" and an empty array as the value.
 
-    zoo.husky.timeSlept = 4
-    
 // 22. Within each animal's meals array, create two objects with keys of "monday" and "wednesday". You only feed those jerks twice a week. It's fine.
 
 // 23. In the individual days of the week, create an object with the key of each meal ("breakfast", "lunch", "dinner") and a made up value of what they ate.
@@ -217,7 +171,3 @@ books.push(book1, book2, book3);
 
 // 30. This joker wants you to add the "hireDate" for each zookeeper. Within the empty array attached to each name, assign a key/value pair of
 // "hireDate" and the value being a string of hire date.
-
-    
-    var theNumber = Number(prompt("Pick a number", ""));
-    alert("Your number is the square root of " + the Number * theNumber);
