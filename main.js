@@ -120,25 +120,7 @@ jsWorkshop.classmates = '';
 
 // 15. Create an emtpy array called "books".
 
-var books = [];
 
-var book1 = {samIam:
-             {title: "Green Eggs and Ham",
-               author: "Dr. Seuss",
-               pages: 24
-             }};
-var book2 = {boysBoat:
-        {title: "Boys in the Boat",
-        author: "Daniel Brown",
-        pages: 669
-               }};
-var book3 = {silkworm:
-        {title: "Silkworm",
-        author: "Robert Galbraith",
-        pages: 547
-        }};
-
-books.push(book1, book2, book3);
 
 // Create three objects that contain book titles, their author, and number of pages.
 // Insert the three objects into the "books" array.
@@ -161,32 +143,84 @@ books.push(book1, book2, book3);
                                   pages: 569,
                                   }
                 }]
+    
+    var books = [];
+
+var book1 = {samIam:
+             {title: "Green Eggs and Ham",
+               author: "Dr. Seuss",
+               pages: 24
+             }};
+var book2 = {boysBoat:
+        {title: "Boys in the Boat",
+        author: "Daniel Brown",
+        pages: 669
+               }};
+var book3 = {silkworm:
+        {title: "Silkworm",
+        author: "Robert Galbraith",
+        pages: 547
+        }};
+
+books.push(book1, book2, book3);
 // 15a. Access the author of the first book.
 
+books[0].samIam.author
+
 // 15b. Print the length of the author the the third book.
+books[2].silkworm.author.length
 
 // 16. To each book object variable, add a key of "dateRead" with a value of the year you read the book.
 // (Go ahead and make this up, too. Get wild.)
+book1.dateRead = 1990; delete book1.dateRead;
+book2.dateRead = 2015; delete book2.dateRead;
+book3.dateRead = 2016; delete book3.dateRead;
+
+book1.samIam.dateRead = 1990;
+book2.boysBoat.dateRead = 2015;
+book3.silkworm.dateRead = 2016;
 
 // 17. Remove the second book from the books Array.
+delete books.book2;
 
 // Bonus: Explain, in your own words, the difference between Literal Notation and Constructor.
 
 // 17. Let's play a game. Create an object (like we did with the bike in class) and assign it at least five properties.
 // The class will guess what your object is based on it's properties.
 
+
 // You're a zookeeper and keeping a detailed log of each of the animals in your zoo.
 // 18. Create an empty object called "zoo"
+ 
 
 // 19. Create assign three animals as your keys in the "zoo" object. The values of the animals should be empty objects.
+var zoo = {};
+
+zoo.elephant = {};
+zoo.giraffe = {};
+zoo.rhino = {};
+
+console.log(zoo);
+
 
 // 20. Within each animal empty object, assign a key/value pair of "timeSlept" and a number indicating the hours of sleep each animal got. (Make this up, obvi)
+zoo.elephant.timeSlept = 10;
+zoo.giraffe.timeSlept = 4;
+zoo.rhino.timeSlept = 9;
 
 // 21. Within each animal object, assign a object pair consisting of a key called "meals" and an empty array as the value.
 
-    zoo.husky.timeSlept = 4
+zoo.elephant.meals = [];
+zoo.giraffe.meals = [];
+zoo.rhino.meals = [];
     
 // 22. Within each animal's meals array, create two objects with keys of "monday" and "wednesday". You only feed those jerks twice a week. It's fine.
+var monday = {monday: {}};
+var wednesday = {wednesday: {}};
+
+zoo.elephant.meals.push(monday, wednesday);
+zoo.giraffe.meals.push(monday, wednesday);
+zoo.rhino.meals.push(monday, wednesday);
 
 // 23. In the individual days of the week, create an object with the key of each meal ("breakfast", "lunch", "dinner") and a made up value of what they ate.
 // That array should look like this (within the meals object, within the animal object, within the zoo object):
@@ -201,22 +235,65 @@ books.push(book1, book2, book3);
     dinner: "I put my thing down, flip it, and reverse it"
   }}]
 
+  zoo.elephant.meals[0].monday.breakfast = "apples"
+  zoo.elephant.meals[0].monday.lunch = "pizza pocket"
+  zoo.elephant.meals[0].monday.dinner = "grilled cheese"
+  zoo.elephant.meals[1].wednesday.breakfast = "gummie bears"
+  zoo.elephant.meals[1].wednesday.lunch = "bananas"
+  zoo.elephant.meals[1].wednesday.dinner = "chicken pot pie"
+
+  zoo.giraffe.meals[0].monday.breakfast = "cherrios"
+  zoo.giraffe.meals[0].monday.lunch = "pb and j"
+  zoo.giraffe.meals[0].monday.dinner = "butternut squash"
+  zoo.giraffe.meals[1].wednesday.breakfast = "lucky charms"
+  zoo.giraffe.meals[1].wednesday.lunch = "tacos"
+  zoo.giraffe.meals[1].wednesday.dinner = "mush-mush"
+  
+  zoo.rhino.meals[0].monday.breakfast = "pancakes"
+  zoo.rhino.meals[0].monday.lunch = "veggies"
+  zoo.rhino.meals[0].monday.dinner = "salad"
+  zoo.rhino.meals[1].wednesday.breakfast = "burrito"
+  zoo.rhino.meals[1].wednesday.lunch = "ice cream"
+  zoo.rhino.meals[1].wednesday.dinner = "pizza"
+ 
+  
 // 24. Damn it. The night zookeeper just informed you that your second animal took a nap right before bed time. Add two hours to his "timeSlept" value.
+  
+var overSleep = zoo.giraffe.timeSlept;
+zoo.giraffe.timeSlept = overSleep +2;
+
 
 // 25. To each animal object, add a "favoriteActivities" key with the value being an array of three of his/her favorite activities.
 
+zoo.elephant.favoriteActivities = ["skiing", "reading", "eating chocolate"];
+zoo.giraffe.favoriteActivities = ["munching", "star gazing", "playing guitar"];
+zoo.rhino.favoriteActivities = ["playing hooky", "bathing", "hide and seek"];
+
 // 26. Your first animal just tossed his lunch at the zoo visitors. Change his monday lunch value to an empty string.
+
+zoo.elephant.meals[0].monday.lunch = "";
 
 // 27. You know your "zoo" object? The owner wants to add zookeepers to the object, too. But before we do that, we need to make sure
 // the animals stay separate from the zookeepers. To do this, create an object within the "zoo" object. The key will be "animals" and the value will be an array
 // containing the three animals you already defined.
 
+var hairyDudes = zoo;
+var zoo = {animals: hairyDudes};
+
 // 28. To the "zoo" object, add an object named "zookeepers" with the value being and empty object.
+
+zoo.zookeepers = {};
 
 // 29. To the empty "zookeepers" object, add two objects with their keys being two names and their values being an empty object.
 
+zoo.zookeepers.carl = {};
+zoo.zookeepers.ginger = {};
+
 // 30. This joker wants you to add the "hireDate" for each zookeeper. Within the empty array attached to each name, assign a key/value pair of
 // "hireDate" and the value being a string of hire date.
+
+zoo.zookeepers.carl.hireDate = "01/17/1998"
+zoo.zookeepers.ginger.hireDate = "9/30/2011"
 
     
     var theNumber = Number(prompt("Pick a number", ""));
